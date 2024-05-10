@@ -45,11 +45,22 @@ if (!empty($first_name) || !empty($last_name)) {
 $page  = $_GET['page'] ?? 1;
 $query .= $filters . ' LIMIT 5 OFFSET ' . ( $page - 1 ) * 5;
 
+try {
+  $count_query = $pdo->query($count_query . $filters);
+  $count_result = $count_query ? $count_query->fetch()['num_rows'] : 0;
+  $count_query->closeCursor();
+
+  $num_pages = ($count_result / 5) + (($count_result % 5) ? 1 : 0);
+} catch (PDOException $e) {
+  $count_result = 0;
+  $num_pages = 1;
+}
+
 $result = $pdo->query($query);
 
-$count_query = $pdo->query($count_query . $filters);
-$count_result = $count_query ? $count_query->fetch()['num_rows'] : 0;
-$num_pages = ($count_result / 5) + (($count_result % 5) ? 1 : 0);
+if ($count_result === 0) {
+  $count_result = $result ? $result->rowCount() : 0;
+}
 
 ?>
 
