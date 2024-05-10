@@ -12,7 +12,7 @@ if (isset($_GET['first_name'], $_GET['last_name'], $_GET['birth_date'])) {
 		?>
 
 		<div class="alert alert-success" role="alert">
-			User updated
+			Usuario actualizado
 		</div>
 
 		<?php
@@ -20,7 +20,7 @@ if (isset($_GET['first_name'], $_GET['last_name'], $_GET['birth_date'])) {
 		?>
 
 		<div class="alert alert-warning" role="alert">
-			There was a problem while updating the new user: <?= json_encode( $pdo->errorInfo() ) ?>
+			Hubo un problema actualizando el usuario: <?= json_encode( $pdo->errorInfo() ) ?>
 		</div>
 		
     <?php
@@ -28,7 +28,9 @@ if (isset($_GET['first_name'], $_GET['last_name'], $_GET['birth_date'])) {
 
 	?>
 
-	<a class="btn btn-primary active" href="?action=search">Back</a>
+	<a class="btn btn-primary active" href="?action=search">
+		Regresar
+	</a>
 	
   <?php
 } else {
@@ -37,7 +39,7 @@ if (isset($_GET['first_name'], $_GET['last_name'], $_GET['birth_date'])) {
 
 	?>
 
-	<h2>Editing student <?= $_GET['id'] ?></h2>
+	<h2>Editar estudiante <?= $_GET['id'] ?></h2>
 	<hr/>
 
 	<form method="get">
@@ -45,28 +47,30 @@ if (isset($_GET['first_name'], $_GET['last_name'], $_GET['birth_date'])) {
 		<input type="hidden" name="id" value="<?= $_GET['id'] ?>">
 		
     <label>
-			First name:
+			Nombre:
 			<input type="text" name="first_name" value="<?= $row['first_name'] ?>"/>
 		</label>
 
 		<br/>
 		
     <label>
-			Last name:
+			Apellidos:
 			<input type="text" name="last_name" value="<?= $row['last_name'] ?>"/>
 		</label>
 
 		<br/>
 
 		<label>
-			Birth date:
+			Fecha de nacimiento:
 			<input type="text" name="birth_date" value="<?= $row['birth_date'] ?>"/>
 		</label>
 		
     <hr/>
 		
-    <input type="submit" class="btn btn-primary" value="Submit">
-		<a href="?action=search" class="btn btn-secondary">Back</a>
+    <input type="submit" class="btn btn-primary" value="Actualizar">
+		<a href="?action=search" class="btn btn-secondary">
+			Regresar
+		</a>
 	</form>
 
 	<?php

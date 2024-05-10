@@ -10,16 +10,16 @@ if (!defined('SQL_INJECTION_IN_PHP')) {
   <input type="hidden" name="action" value="search" />
 
   <label>
-    First name:
+    Nombre:
     <input type="text" name="first_name" value="<?= $_GET['first_name'] ?? '' ?>">
   </label>
 
   <label>
-    Last name:
+    Apellidos:
     <input type="text" name="last_name" value="<?= $_GET['last_name'] ?? '' ?>">
   </label>
 
-  <input type="submit" value="Submit">
+  <input type="submit" value="Buscar">
 </form>
 
 <?php
@@ -57,10 +57,10 @@ $num_pages = ($count_result / 5) + (($count_result % 5) ? 1 : 0);
   <thead>
     <tr>
       <th scope="col">Id</th>
-      <th scope="col">First name</th>
-      <th scope="col">Last name</th>
-      <th scope="col">Birth date</th>
-      <th scope="col">Actions</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellidos</th>
+      <th scope="col">Fecha de nacimiento</th>
+      <th scope="col">Acciones</th>
     </tr>
   </thead>
 
@@ -84,7 +84,7 @@ $num_pages = ($count_result / 5) + (($count_result % 5) ? 1 : 0);
   </tbody>
 </table>
 
-<p>Number of students: <?= $count_result ?></p>
+<p>Numero de estudiantes: <?= $count_result ?></p>
 
 <?php
   for ($i = 1; $i <= $num_pages; $i++) {
@@ -99,4 +99,6 @@ $num_pages = ($count_result / 5) + (($count_result % 5) ? 1 : 0);
 ?>
 
 <hr/>
-<a href="?action=insert" class="btn btn-primary">Add Student</a>
+<a href="?action=insert" class="btn btn-primary">
+  Agregar estudiante
+</a>

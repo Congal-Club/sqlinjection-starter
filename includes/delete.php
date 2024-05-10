@@ -12,7 +12,7 @@ if ($result) {
 	?>
 
 	<div class="alert alert-success" role="alert">
-		User <?= $id ?> deleted
+		Usuario <?= $id ?> eliminado
 	</div>
 
 	<?php
@@ -20,12 +20,14 @@ if ($result) {
 	?>
 
 	<div class="alert alert-warning" role="alert">
-		Couldn't find user <?= $id ?>
+		No se puede encontrar el usuario <?= $id ?>
 	</div>
 
 	<?php
 }
 
 ?>
-	<a class="btn btn-primary active" href="?action=search">Back</a>
+	<a class="btn btn-primary active" href="?action=search">
+		Regresar
+	</a>
 <?php

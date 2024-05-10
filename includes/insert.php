@@ -12,7 +12,7 @@ if (isset($_GET['first_name'], $_GET['last_name'], $_GET['birth_date'])) {
 		?>
 
 		<div class="alert alert-success" role="alert">
-			User inserted
+			Usuario insertado
 		</div>
 
 		<?php
@@ -20,7 +20,7 @@ if (isset($_GET['first_name'], $_GET['last_name'], $_GET['birth_date'])) {
 		?>
 
 		<div class="alert alert-warning" role="alert">
-			There was a problem while inserting the new user: <?= json_encode( $pdo->errorInfo() ) ?>
+			Hubo un problema insertando el usuario: <?= json_encode( $pdo->errorInfo() ) ?>
 		</div>
 
 		<?php
@@ -28,13 +28,15 @@ if (isset($_GET['first_name'], $_GET['last_name'], $_GET['birth_date'])) {
 
 	?>
 
-	<a class="btn btn-primary active" href="?action=search">Back</a>
+	<a class="btn btn-primary active" href="?action=search">
+		Regresar
+	</a>
 	
   <?php
 } else {
 	?>
 
-	<h2>Add Student</h2>
+	<h2>Agregar estudiante</h2>
 	<hr/>
 
 	<form method="get">
@@ -42,27 +44,29 @@ if (isset($_GET['first_name'], $_GET['last_name'], $_GET['birth_date'])) {
     
 		<div>
 			<label>
-				First name:
+				Nombre:
 				<input type="text" name="first_name">
 			</label>
 		</div>
 
 		<div>
 			<label>
-				Last name:
+				Apellidos:
 				<input type="text" name="last_name">
 			</label>
 		</div>
 
 		<div>
 			<label>
-				Birth date:
+				Fecha de nacimiento:
 				<input type="text" name="birth_date">
 			</label>
 		</div>
 
-		<input type="submit" class="btn btn-primary" value="Submit">
-		<a href="?action=search" class="btn btn-secondary">Back</a>
+		<input type="submit" class="btn btn-primary" value="Agregar">
+		<a href="?action=search" class="btn btn-secondary">
+			Regresar
+		</a>
 	</form>
     
 	<?php
