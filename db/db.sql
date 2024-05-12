@@ -5,20 +5,22 @@ CREATE TABLE `teachers` (
 	`last_name`	TEXT,
 	`password`	TEXT
 );
-INSERT INTO teachers VALUES(1,'John','Travolta','password123');
-INSERT INTO teachers VALUES(2,'Albert','Einstein','relat!vity');
-INSERT INTO teachers VALUES(3,'William','Wallace','fre3dom!');
-INSERT INTO teachers VALUES(4,'Jean Luc','Picard','3ngage<>');
+
+INSERT INTO teachers VALUES(1, 'John', 'Travolta', 'password123');
+INSERT INTO teachers VALUES(2, 'Dwayne', 'Jhonson', 'relat!vity');
+INSERT INTO teachers VALUES(3, 'Jhon', 'Cena', 'fre3dom!');
+INSERT INTO teachers VALUES(4, 'Roman', 'Reigns', '3ngage<>');
 
 
 CREATE TABLE `subjects` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	`name`	TEXT NOT NULL
 );
-INSERT INTO subjects VALUES(1,'Maths');
-INSERT INTO subjects VALUES(2,'English');
-INSERT INTO subjects VALUES(3,'Science');
-INSERT INTO subjects VALUES(4,'History');
+
+INSERT INTO subjects VALUES(1,'Matemáticas');
+INSERT INTO subjects VALUES(2,'Inglés');
+INSERT INTO subjects VALUES(3,'Ciencias Naturales');
+INSERT INTO subjects VALUES(4,'Historia');
 
 CREATE TABLE `qualifications` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -30,15 +32,16 @@ CREATE TABLE `qualifications` (
 	`qualification_date`	TEXT NOT NULL,
 	`is_final`	INTEGER NOT NULL
 );
-INSERT INTO qualifications VALUES(1,1,1,'1',1,8.0999999999999996447,'2020-02-01',0);
-INSERT INTO qualifications VALUES(2,1,2,'1',1,7.0999999999999996447,'2020-02-01',0);
-INSERT INTO qualifications VALUES(3,1,3,'1',1,9.3000000000000007105,'2020-02-01',0);
-INSERT INTO qualifications VALUES(4,1,4,'1',1,4.25,'2020-02-01',0);
-INSERT INTO qualifications VALUES(5,1,5,'1',1,6.7999999999999998223,'2020-02-01',0);
-INSERT INTO qualifications VALUES(6,1,6,'1',1,10.0,'2020-02-01',0);
-INSERT INTO qualifications VALUES(7,1,7,'1',1,8.0,'2020-02-01',0);
-INSERT INTO qualifications VALUES(8,1,9,'1',1,5.75,'2020-02-01',0);
-INSERT INTO qualifications VALUES(9,1,10,'1',1,3.25,'2020-02-01',0);
+
+INSERT INTO qualifications VALUES(1,1,1,'1',1,8.0999999999999996447,'2024-02-01',0);
+INSERT INTO qualifications VALUES(2,1,2,'1',1,7.0999999999999996447,'2024-02-01',0);
+INSERT INTO qualifications VALUES(3,1,3,'1',1,9.3000000000000007105,'2024-02-01',0);
+INSERT INTO qualifications VALUES(4,1,4,'1',1,4.25,'2024-02-01',0);
+INSERT INTO qualifications VALUES(5,1,5,'1',1,6.7999999999999998223,'2024-02-01',0);
+INSERT INTO qualifications VALUES(6,1,6,'1',1,10.0,'2024-02-01',0);
+INSERT INTO qualifications VALUES(7,1,7,'1',1,8.0,'2024-02-01',0);
+INSERT INTO qualifications VALUES(8,1,9,'1',1,5.75,'2024-02-01',0);
+INSERT INTO qualifications VALUES(9,1,10,'1',1,3.25,'2024-02-01',0);
 
 
 CREATE TABLE `terms` (
@@ -46,9 +49,10 @@ CREATE TABLE `terms` (
 	`year`	INTEGER NOT NULL,
 	`term_no`	INTEGER NOT NULL
 );
-INSERT INTO terms VALUES(1,2020,1);
-INSERT INTO terms VALUES(2,2020,2);
-INSERT INTO terms VALUES(3,2020,3);
+
+INSERT INTO terms VALUES(1,2024,1);
+INSERT INTO terms VALUES(2,2024,2);
+INSERT INTO terms VALUES(3,2024,3);
 
 CREATE TABLE `class_lists` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -211,16 +215,16 @@ CREATE TABLE `students` (
 	`country`	TEXT,
 	`hidden`	INTEGER NOT NULL DEFAULT 0
 );
-INSERT INTO students VALUES(1,'Desiree','Joubert','2007-04-01',NULL,'','','','', 0);
-INSERT INTO students VALUES(2,'Blythe','Weatherall','2007-05-10',NULL,NULL,NULL,NULL,NULL,0);
-INSERT INTO students VALUES(3,'Felisha','Bookman','2006-03-12',NULL,NULL,NULL,NULL,NULL,0);
-INSERT INTO students VALUES(4,'Natacha','Pua','2007-11-23',NULL,NULL,NULL,NULL,NULL,0);
-INSERT INTO students VALUES(5,'Chante','Fenske','2007-12-28',NULL,NULL,NULL,NULL,NULL,0);
-INSERT INTO students VALUES(6,'Amado','Grimaldi','2007-06-18',NULL,NULL,NULL,NULL,NULL,0);
-INSERT INTO students VALUES(7,'Valery','Files','2007-03-08',NULL,NULL,NULL,NULL,NULL,0);
-INSERT INTO students VALUES(8,'Taryn','Carbone','2007-08-01',NULL,NULL,NULL,NULL,NULL,0);
-INSERT INTO students VALUES(9,'Julissa','Spengler','2007-01-31',NULL,NULL,NULL,NULL,NULL,0);
-INSERT INTO students VALUES(10,'Brain','Spagnuolo','2007-09-23',NULL,NULL,NULL,NULL,NULL,0);
-INSERT INTO students VALUES(11,'Hidden','Student','2001-01-01',NULL,NULL,NULL,NULL,NULL,1);
+INSERT INTO students VALUES(1,'Cesar','Villalobos Olmos','2002-01-09',NULL,'','','','', 0);
+INSERT INTO students VALUES(2,'Hector Felipe','Hernandez Garcia','2002-03-13',NULL,NULL,NULL,NULL,NULL,0);
+INSERT INTO students VALUES(3,'Luis Angel','Hernandez Lopez','2002-04-17',NULL,NULL,NULL,NULL,NULL,0);
+INSERT INTO students VALUES(4,'Manuel Alejandro','Alvarado Ibarra','2000-05-10',NULL,NULL,NULL,NULL,NULL,0);
+INSERT INTO students VALUES(5,'Aranzazu Jimena','Messa Sanchez','2001-04-16',NULL,NULL,NULL,NULL,NULL,0);
+INSERT INTO students VALUES(6,'Erick','Mastachi Zuñiga','2000-12-22',NULL,NULL,NULL,NULL,NULL,0);
+INSERT INTO students VALUES(7,'Karen Sarahy','Martinez Raymundo','2002-12-27',NULL,NULL,NULL,NULL,NULL,0);
+INSERT INTO students VALUES(8,'Hagay Daniel','Alonso Villanueva','2001-11-17',NULL,NULL,NULL,NULL,NULL,0);
+INSERT INTO students VALUES(9,'Pedro','Lopez Lopez','2000-09-28',NULL,NULL,NULL,NULL,NULL,0);
+INSERT INTO students VALUES(10,'Francisco','Saenz Gomez','2002-06-10',NULL,NULL,NULL,NULL,NULL,0);
+INSERT INTO students VALUES(11,'Hidden','User','2000-01-01',NULL,NULL,NULL,NULL,NULL,1);
 
 COMMIT;

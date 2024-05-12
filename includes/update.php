@@ -30,7 +30,7 @@ if (isset($_GET['first_name'], $_GET['last_name'], $_GET['birth_date'])) {
 		?>
 
 		<div class="alert alert-warning" role="alert">
-			Hubo un problema actualizando el usuario: <?= json_encode( $pdo->errorInfo() ) ?>
+			Hubo un problema actualizando el usuario: <?= json_encode($pdo->errorInfo()) ?>
 		</div>
 		
 		<?php
